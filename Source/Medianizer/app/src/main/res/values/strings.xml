@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Medianizer</string>
+    <string-array name="Gname_arrays">
+        <item>Action</item>
+        <item>Adventure</item>
+        <item>Sci-Fi</item>
+        <item>Thriller</item>
+        <item>Drama</item>
+        <item>Crime</item>
+    </string-array>
+</resources>
