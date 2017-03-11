@@ -37,6 +37,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
 
         viewFlipper = (ViewFlipper) this.findViewById(R.id.viewFlipper);
         viewFlipper.setOnClickListener(this);
+
     }
 
     @Override
@@ -51,7 +52,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
     }
     public void onMovie(View v)
     {
-        Intent i = new Intent(MainActivity2.this, MovieActivity.class);
+        Intent i = new Intent(MainActivity2.this, MainActivityMovie.class);
         startActivity(i);
     }
     public void onMusic(View v)

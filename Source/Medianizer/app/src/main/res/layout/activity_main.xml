@@ -4,96 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.karthik.medianizer.MainActivity">
+    tools:context="com.example.karthik.medianizer.MainActivity"
+    android:background="#17202A">
+
+    <TextView
+        android:text="Medianizer"
+        android:layout_width="249dp"
+        android:layout_height="199dp"
+        android:id="@+id/textView11"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+
+        tools:text="Medianizer" />
+    <TextView
+        android:text="An Entertainment Hub"
+        android:layout_width="299dp"
+        android:layout_height="199dp"
+        android:id="@+id/textView12"
+        android:layout_marginTop="210dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="25dp"
+        android:textColor="#FDFEFE"
+
+        tools:text="Medianizer" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/BLogin"
+        android:layout_marginTop="250dp"
+        android:background="#B03A2E"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:onClick="onLogin"
+
+
+        />
+
     <ViewFlipper
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/viewFlipper"
         android:alpha="0.5">
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:scaleType="fitXY"
-            android:id="@+id/imageView"
-            android:src="@drawable/movie"/>
+
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:scaleType="fitXY"
             android:id="@+id/imageView2"
-            android:src="@drawable/music"/>
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:scaleType="fitXY"
-            android:id="@+id/imageView3"
-            android:src="@drawable/books"/>
+            android:src="@drawable/abc"/>
 
     </ViewFlipper>
-    <Button
-        android:id="@+id/next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign Up"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:background="@android:color/transparent"
-        android:textSize="25dp"
-        android:layout_marginRight="20dp"
-        android:fontFamily="calibri"
-        android:onClick="onSign"
-        />
-    <Button
-        android:id="@+id/previous"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:background="@android:color/transparent"
-        android:textSize="25dp"
-        android:fontFamily="calibri"
-        android:layout_marginLeft="500px"
-        android:layout_alignParentTop="true"
-        android:layout_alignTop="@+id/next"
-        android:onClick="onLogin"/>
-    <Button
-        android:id ="@+id/push_button"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:textColor="#FFFFFF"
-        android:text="Movies"
-        android:textSize="20dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginLeft="30dp"
-        android:background="@drawable/circlebutton"
-        android:padding="18dp"
-        android:onClick="onMovie"
-        />
-    <Button
-        android:id ="@+id/push_button3"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:text="Music"
-        android:textSize="20dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginLeft="225dp"
-        android:background="@drawable/circlebutton"
-        android:padding="15dp"
-        android:textColor="#FFFFFF"
-        android:onClick="onMusic"
 
-        />
-    <Button
-        android:id ="@+id/push_button1"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:text="Books"
-        android:textSize="20dp"
-        android:layout_marginTop="320dp"
-        android:layout_marginLeft="130dp"
-        android:background="@drawable/circlebutton"
-        android:padding="15dp"
-        android:textColor="#FFFFFF"
-        android:onClick="onBooks"
-        />
+
 
 </RelativeLayout>

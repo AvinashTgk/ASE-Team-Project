@@ -32,19 +32,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         viewFlipper.startFlipping();
-        viewFlipper.setFlipInterval(1000);
+        viewFlipper.setFlipInterval(7000);
     }
-    public  void onLogin(View v)
+   public  void onLogin(View v)
     {
         Intent i= new Intent(MainActivity.this,LoginActivity.class);
         startActivity(i);
     }
-    public  void onSign(View v)
+   /* public  void onSign(View v)
     {
         Intent i= new Intent(MainActivity.this,RegActivity.class);
         startActivity(i);
     }
-    public  void onMovie(View v)
+   public  void onMovie(View v)
     {
         Intent i= new Intent(MainActivity.this,LoginActivity.class);
         startActivity(i);
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent i= new Intent(MainActivity.this,LoginActivity.class);
         startActivity(i);
     }
-
+*/
 
 
 }

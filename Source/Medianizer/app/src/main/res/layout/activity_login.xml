@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,48 +11,55 @@
     tools:context=".LoginActivity"
     android:onClick="onButtonClick"
     android:clickable="true"
-    android:background="@drawable/login">
+android:background="@drawable/abc"
+    android:alpha="0.9"
     >
-
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:background="#B03A2E"
+        android:textColor="#FFFFFF"
         android:text="Log In"
         android:id="@+id/Blogin"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="370dp"
         android:layout_centerHorizontal="true"
         android:onClick="onLogin" />
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Sign Up"
+        android:text="Create an account"
         android:id="@+id/Bsign"
-        android:layout_marginTop="335dp"
+        android:background="#B03A2E"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="435dp"
         android:layout_centerHorizontal="true"
         android:onClick="onSign" />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Username"
-        android:id="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="false"
-        android:layout_alignParentTop="true"
         android:textAppearance="?android:attr/textAppearanceLarge"
-
-
-        android:layout_toStartOf="@+id/Blogin"
-        android:clickable="true"
-        android:layout_toLeftOf="@+id/Blogin" />
-
+        android:text="Username"
+        android:id="@+id/textView1"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-medium"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="180dp"
+        />
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/TFusername"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/textView1"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-medium"
+        android:backgroundTint="#FFFFFF"
+
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -59,22 +67,35 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Password"
         android:id="@+id/textView3"
-
-
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-medium"
         android:layout_below="@+id/TFusername"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+       />
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:ems="10"
+
         android:id="@+id/TFpassword"
         android:layout_below="@+id/textView3"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FFFFFF"/>
 
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="130dp"
+        app:srcCompat="@drawable/icon"
+        android:id="@+id/imageView4"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="100dp"
+        android:visibility="visible"
+        />
 
 
 </RelativeLayout>
