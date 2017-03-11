@@ -11,58 +11,113 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class MovieActivity extends Activity {
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.graphics.Color;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TableLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
-    public Spinner spinner1;
-    ArrayAdapter<CharSequence> adapter3 ;
+import java.util.ArrayList;
+
+public class MovieActivity extends AppCompatActivity implements View.OnClickListener,GetMovieAsync.IMovies {
+
+    LinearLayout layout;
+    LinearLayout.LayoutParams params;
+    ArrayList<Movie> moviesList;
+    String name;
+    static  ProgressDialog pd;
+    int i=0;
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activitry_movie);
+        layout = (LinearLayout) findViewById(R.id.movieLinearLayout);
+        params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
+        pd= new ProgressDialog(this);
+        pd.setCancelable(false);
+        pd.setMessage("Loading Movie List");
+        params.topMargin = 10;
+        params.bottomMargin = 10;
+        params.leftMargin = 5;
+        params.rightMargin = 5;
+
+        setTitle("Search Movies");
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
+        Intent intent=getIntent();
+        if(intent.getExtras()!=null)
+        {
+            name = intent.getStringExtra("movie_key");
+
+            new GetMovieAsync(this).execute("http://www.omdbapi.com/?type=movie&s=" + name);
+
+
+        }
+
+    }
 
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activitry_movie);
+    public void onClick(View v)
+    {
 
-        /*Spinner spinner1 = (Spinner) findViewById(R.id.spinner1);
-        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.destinations_list, android.R.layout.simple_spinner_item);
-        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner1.setAdapter(adapter1);
-        spinner1.setOnItemSelectedListener(new MyOnItemSelectedListener());*/
+        int n= (int) v.getTag();
+        Intent i=new Intent(this,MovieDetail.class);
+        i.putParcelableArrayListExtra("movie_list", moviesList);
+        i.putExtra("movie_key", n);
+        i.putExtra("movie_name",name);
+        finish();
+        startActivity(i);
 
     }
-    /*public class MyOnItemSelectedListener implements OnItemSelectedListener{
+
+    @Override
+    public void getMovies(ArrayList<Movie> NList)
+    {
+        moviesList = NList;
+
+        if(NList==null)
+        {
+            Intent i=new Intent(this,MainActivityMovie.class);
+            pd.dismiss();
+            finish();
+            Toast.makeText(MovieActivity.this,"Please Enter Correct Movie Name",Toast.LENGTH_SHORT).show();
+            startActivity(i);
+
+        }
+        else {
+            for (Movie m : moviesList) {
+
+                TextView text = new TextView(this);
+                text.setText(m.getTitle() + " (" + m.getYear() + ")");
+                text.setTag(i);
+                i++;
+                text.setTextSize(15);
+                text.setPadding(5, 5, 5, 5);
+                text.setLayoutParams(params);
+
+                text.setOnClickListener(this);
+                layout.addView(text);
+
+                ImageView divider = new ImageView(this);
+                divider.setLayoutParams(params);
 
 
-        public void onItemSelected(AdapterView<?> parent, View v, int pos,long id) {
-            // TODO Auto-generated method stub
-            //use the selected station and departure time to calculate the required time
+                layout.addView(divider);
 
-            if (spinner1.getSelectedItem().equals("5")){
-                adapter3 = ArrayAdapter.createFromResource(MovieActivity.this,R.array.departure_timeH5M_list, android.R.layout.simple_spinner_item);
-                adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spinner3.setAdapter(adapter3);
-
-                Log.v("spinner2","5");
-            }else if(spinner1.getSelectedItem().equals("6")){
-
-                adapter3 = ArrayAdapter.createFromResource(MovieActivity.this,R.array.departure_timeH6M_list, android.R.layout.simple_spinner_item);
-                adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spinner3.setAdapter(adapter3);
-
-                Log.v("spinner2","6");
             }
-
+            pd.dismiss();
         }
-
-        public void onNothingSelected(AdapterView<?> arg0) {
-            // TODO Auto-generated method stub
-
-        }
-
     }
-}*/
-    }
-
-    // add items into spinner dynamically
-
-
-
+}
