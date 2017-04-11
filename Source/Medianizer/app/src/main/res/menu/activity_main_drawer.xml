@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_Movies" android:icon="@android:drawable/ic_menu_camera"
+            android:title="Movies" />
+        <item android:id="@+id/nav_Music" android:icon="@android:drawable/ic_menu_gallery"
+            android:title="Music" />
+        <item android:id="@+id/nav_Books" android:icon="@android:drawable/ic_menu_slideshow"
+            android:title="Books" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item android:id="@+id/nav_help" android:icon="@android:drawable/ic_menu_share"
+                android:title="Help" />
+            <item android:id="@+id/nav_Logout" android:icon="@android:drawable/ic_menu_send"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>
