@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.karthik.medianizer.MovieDetail">
+    tools:context="com.example.sirisha.mymedianizer.MovieDetail">
 
     <TextView
         android:layout_width="match_parent"
@@ -146,7 +146,7 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="finish"
+        android:text="@string/finish"
         android:id="@+id/button2"
         android:onClick="finishClicked"
         android:layout_alignParentBottom="true"
