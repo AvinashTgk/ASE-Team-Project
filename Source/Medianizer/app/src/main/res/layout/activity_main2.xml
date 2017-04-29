@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity2"
+    android:background="@drawable/abc">
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:textSize="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="calibri"
+        android:onClick="onLogout"
+        android:textColor="#FDFEFE"
+        android:background="#B03A2E"
+        android:layout_marginTop="10dp"
+
+        />
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:entries="@array/spinner_array"
+        android:textColor="#FDFEFE"
+        android:background="#B03A2E"
+        android:paddingBottom="20dp"
+        />
+    <Button
+        android:id="@+id/itemsearch"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:layout_alignParentTop="true"
+        android:textSize="20dp"
+        android:layout_marginTop="150dp"
+        android:fontFamily="calibri"
+        android:onClick="onClickItem"
+        android:textColor="#FDFEFE"
+        android:background="#B03A2E"
+        android:layout_marginLeft="135dp"
+        />
+
+
+    <TextView
+        android:id="@+id/voiceInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:textSize="26sp"
+        android:textStyle="normal"
+        android:textColor="#FDFEFE"
+        android:background="#B03A2E"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="#B03A2E"
+            android:id="@+id/btnSpeak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:text="Tap to Open Mic"
+            android:textSize="22sp"
+            android:textStyle="normal"
+            android:textColor="#FDFEFE"
+
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
+
