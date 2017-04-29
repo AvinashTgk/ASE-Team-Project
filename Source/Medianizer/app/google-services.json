@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "596287193601",
+    "firebase_url": "https://medianizer-2b811.firebaseio.com",
+    "project_id": "medianizer-2b811",
+    "storage_bucket": "medianizer-2b811.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596287193601:android:dbfc1a2eb8a24643",
+        "android_client_info": {
+          "package_name": "com.example.sirisha.mymedianizer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596287193601-f1gn97225ckjdv1inp0uuh1gkdnlgm0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvwSHrwGA5ehQCKq8iIZ_8CxYz0pu-k_s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
