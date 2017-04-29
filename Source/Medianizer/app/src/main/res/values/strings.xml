@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Medianizer</string>
-    <string name="Search_IMDB">Search</string>
-    <string name="side">|</string>
-    <string name="down">_</string>
-    <string name="finish">Finish</string>
-</resources>
