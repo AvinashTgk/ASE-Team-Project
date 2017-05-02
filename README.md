@@ -13,3 +13,6 @@ https://github.com/AvinashTgk/ASE-Team-Project/blob/master/documentation/Project
 
 Power point presentation
 https://github.com/AvinashTgk/ASE-Team-Project/blob/master/documentation/Medianizer.pptx
+
+Video presentation
+https://www.youtube.com/watch?v=M_uH0WyJ70o
