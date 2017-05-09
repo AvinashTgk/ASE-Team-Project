@@ -16,3 +16,6 @@ https://github.com/AvinashTgk/ASE-Team-Project/blob/master/documentation/Mediani
 
 Video presentation
 https://www.youtube.com/watch?v=M_uH0WyJ70o
+
+Project Final Report
+https://github.com/AvinashTgk/ASE-Team-Project/blob/master/documentation/ASE_final%20report%20Medianizer.pdf
